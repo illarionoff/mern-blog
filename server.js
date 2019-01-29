@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 
 // Routes
 const users = require("./routes/api/users");
-const movies = require("./routes/api/blogposts");
+const blogposts = require("./routes/api/blogposts");
 
 // Initialize express app
 const app = express();
@@ -28,7 +28,7 @@ mongoose
 // User Routes
 app.use("/api/users", users);
 
-app.use("/api/movies", movies);
+app.use("/api/blogposts", blogposts);
 
 // Server PORT
 const port = process.env.PORT || 5000;
