@@ -1,0 +1,17 @@
+.navbar {
+  height: 50px;
+  display: flex;
+  background: green;
+  &__brand {
+    border: 1px solid black;
+  }
+  ul {
+    border: 1px solid black;
+    margin-left: auto;
+    list-style: none;
+    display: flex;
+    li {
+      width: 50px;
+    }
+  }
+}
