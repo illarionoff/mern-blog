@@ -3,20 +3,19 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 // Create Schema
-const UserSchema = new Schema({
-  email: {
+const BlogpostSchema = new Schema({
+  title: {
     type: String,
     required: true
   },
-  password: {
+  body: {
     type: String,
     required: true
   },
-  blogposts: [],
   date: {
     type: Date,
     default: Date.now
   }
 });
 
-module.exports = User = mongoose.model("users", UserSchema);
+module.exports = Blogpost = mongoose.model("blogposts", BlogpostSchema);
