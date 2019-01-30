@@ -1,0 +1,23 @@
+.main {
+  display: flex;
+  .body__list {
+    width: 70%;
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .body__post {
+      width: 80%;
+      margin: 25px 0;
+    }
+    .body__image {
+      width: 100%;
+    }
+    .body__text {
+      size: 0.8rem;
+      line-height: 1.5;
+    }
+  }
+}
