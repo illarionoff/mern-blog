@@ -1,7 +1,7 @@
 const isEmpty = require("./isEmpty");
 const validator = require("validator");
 
-module.exports = function validateMovieInput(data) {
+module.exports = function validateBlogpostInput(data) {
   let errors = {};
 
   // Validate email

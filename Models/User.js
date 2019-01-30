@@ -12,7 +12,6 @@ const UserSchema = new Schema({
     type: String,
     required: true
   },
-  blogposts: [],
   date: {
     type: Date,
     default: Date.now
