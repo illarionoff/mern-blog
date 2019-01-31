@@ -106,8 +106,13 @@ router.post(
     const { errors, isValid } = validateBlogpostInput(req.body);
     if (!isValid) {
       return res.status(400).json(errors);
+      
     }
-    const newTags = req.body.tags.split(",");
+
+    let newTags;
+
+    if (req.body.tags) newTags = req.body.tags.split(",");
+    
 
     const newBlogpost = new Blogpost({
       title: req.body.title,

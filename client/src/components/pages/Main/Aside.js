@@ -20,12 +20,12 @@ export default function Aside() {
         <img src="https://source.unsplash.com/100x100" alt="instagram photos" />
       </div>
       <div className="aside__youtube">
-        <iframe
+        {/* <iframe
           src="https://www.youtube.com/embed/-QCHbHnUD1Y"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
-        />
+        /> */}
       </div>
     </aside>
   );
