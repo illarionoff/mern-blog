@@ -1,9 +1,24 @@
 import React, { Component } from "react";
 
-class Index extends Component {
+import PropTypes from "prop-types";
+
+// Redux
+import { connect } from "react-redux";
+
+class index extends Component {
   render() {
-    return <div />;
+    const { editPost } = this.props.blogpost;
+    return <div>{editPost.title}</div>;
   }
 }
 
-export default Index;
+index.propTypes = {
+  auth: PropTypes.object.isRequired,
+  blogpost: PropTypes.object.isRequired
+};
+const mapStateToProps = state => ({
+  auth: state.auth,
+  blogpost: state.blogpost
+});
+
+export default connect(mapStateToProps)(index);

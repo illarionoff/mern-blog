@@ -32,7 +32,7 @@ class Navbar extends Component {
     return (
       <div className="navbar">
         <div className="navbar__brand">
-          <a href="#">LOGO</a>
+          <Link to="/">LOGO</Link>
         </div>
         {isAuthenticated ? adminPanel : guestPanel}
       </div>

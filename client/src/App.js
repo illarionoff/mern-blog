@@ -14,6 +14,7 @@ import Main from "./components/pages/Main";
 import My404Component from "./components/pages/My404Component";
 import Post from "./components/pages/Post";
 import NewPost from "./components/pages/NewPost";
+import EditPost from "./components/pages/EditPost";
 // Actions
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 // Store
@@ -51,6 +52,7 @@ class App extends Component {
               <Route exact path="/new" component={NewPost} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/post" component={Post} />
+              <Route exact path="/edit" component={EditPost} />
               <Route path="*" component={My404Component} />
             </Switch>
             <Footer />

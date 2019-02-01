@@ -6,9 +6,15 @@ import Aside from "../Main/Aside";
 // Redux
 import { connect } from "react-redux";
 
-import { setEditPost } from "../../../actions/blogpostActions";
+import { editBlogpost } from "../../../actions/blogpostActions";
 
 class index extends Component {
+  onEditClick = e => {
+    e.preventDefault();
+    this.props.editBlogpost(this.props.blogpost.currentPost);
+    this.props.history.push("/edit");
+  };
+
   render() {
     console.log(this.props);
     const { currentPost } = this.props.blogpost;
@@ -31,13 +37,7 @@ class index extends Component {
           >
             BACK
           </button>
-          <Link
-            to="/edit"
-            className="button button-green"
-            onClick={() => this.props.setEditPost(currentPost)}
-          >
-            Edit
-          </Link>
+          <button onClick={this.onEditClick}>Edit</button>
         </div>
         <Aside />
       </div>
@@ -47,7 +47,7 @@ class index extends Component {
 
 index.propTypes = {
   blogpost: PropTypes.object.isRequired,
-  setEditPost: PropTypes.func.isRequired
+  editBlogpost: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({
@@ -56,5 +56,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { setEditPost }
+  { editBlogpost }
 )(index);

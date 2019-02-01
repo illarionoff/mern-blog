@@ -9,22 +9,17 @@ export const setPost = post => {
   };
 };
 // Set Edit blogpost
-export const setEditPost = post => {
+export const editBlogpost = post => {
   return {
     type: SET_EDIT_POST,
     payload: post
   };
 };
-// Add Edit movie
+// Add new blogpost
 export const addNewPost = (newBlogpost, history) => dispatch => {
   console.log(newBlogpost);
   axios
     .post("api/blogposts", newBlogpost)
     .then(res => history.push("/"))
-    .catch(err =>
-      dispatch({
-        type: GET_ERRORS,
-        payload: err.response.data
-      })
-    );
+    .catch(err => console.log(err));
 };
