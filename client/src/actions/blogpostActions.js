@@ -17,11 +17,11 @@ export const setEditBlogpost = post => {
   };
 };
 // Set Edit blogpost
-export const editBlogpost = editedBlogpost => dispatch => {
+export const editBlogpost = (editedBlogpost, history) => dispatch => {
   console.log(editedBlogpost);
   axios
     .put(`api/blogposts/${editedBlogpost._id}`, editedBlogpost)
-    .then(res => console.log(res))
+    .then(res => history.push("/"))
     .catch(err => console.log(err));
 };
 

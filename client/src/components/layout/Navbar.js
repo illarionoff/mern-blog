@@ -10,32 +10,35 @@ class Navbar extends Component {
   render() {
     const { isAuthenticated } = this.props.auth;
     const guestPanel = (
-      <ul className="navbar__menu">
+      <ul className="navbar__menu ">
         <li>
-          <Link to="/login">Login</Link>
+          <Link to="/login" className="link">
+            Login
+          </Link>
         </li>
       </ul>
     );
     const adminPanel = (
       <ul className="navbar__menu">
         <li>
-          <Link to="/new">New</Link>
+          <Link to="/new" className="link">
+            New
+          </Link>
         </li>
         <li>
-          <Link to="/stats">Stats</Link>
+          <Link to="/stats" className="link">
+            Stats
+          </Link>
         </li>
         <li>
-          <button onClick={() => this.props.logoutUser()}>Logout</button>
+          <button onClick={() => this.props.logoutUser()} className="link">
+            Logout
+          </button>
         </li>
       </ul>
     );
     return (
-      <div className="navbar">
-        <div className="navbar__brand">
-          <Link to="/">LOGO</Link>
-        </div>
-        {isAuthenticated ? adminPanel : guestPanel}
-      </div>
+      <div className="navbar">{isAuthenticated ? adminPanel : guestPanel}</div>
     );
   }
 }

@@ -1,0 +1,21 @@
+.form-input {
+  margin: 50px auto;
+}
+
+input[type="text"] {
+  margin: 0 auto;
+  width: 50%;
+  display: block;
+}
+
+textarea {
+  margin: 25px auto;
+  width: 50%;
+  height: 30vh;
+  display: block;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}

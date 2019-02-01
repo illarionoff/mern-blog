@@ -1,0 +1,85 @@
+.button {
+  display: inline-block;
+  margin: 0 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  width: 100px;
+  padding: 10px 0;
+  border: none;
+  font-weight: 700;
+  background: none;
+  color: $dark-gray;
+  background: $light-gray;
+  font-family: $tretiary-font;
+  font-size: 1.4rem;
+  outline: none;
+  &:hover {
+    transform: translateY(-1px);
+    outline: none;
+  }
+  &:active {
+    transform: translateY(0px);
+    outline: none;
+  }
+}
+
+.title {
+  font-family: $secondary-font;
+  color: $dark-gray;
+  &-primary {
+    font-size: 2.4rem;
+  }
+  &-secondary {
+    font-size: 1.6rem;
+  }
+}
+
+.paragraph {
+  font-family: $tretiary-font;
+  font-size: 1.4rem;
+  color: $dark-gray;
+  &-left {
+    text-align: left;
+  }
+}
+
+.link {
+  font-family: $tretiary-font;
+  font-size: 1.4rem;
+  color: $dark-gray;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  border: none;
+  background: none;
+  &:visited {
+    color: $dark-gray;
+  }
+  &:hover {
+    transform: translateY(-1px);
+  }
+  &:active {
+    transform: translateY(0px);
+  }
+}
+
+.solid-line {
+  width: 100%;
+  border-top: 1px solid #3c3c3b4b;
+  margin: 1rem auto;
+}
+
+.image {
+  &-circle {
+    border-radius: 50%;
+  }
+}
+
+.fab {
+  font-size: 1.6rem;
+  color: gray;
+  margin: 0 1rem;
+}

@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Cinzel:400,700|Crimson+Text:400,700|Quicksand:400,700");
+
+@import "./partials/variables";
+@import "./partials/components";
+
+html {
+  font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  padding: 30px;
+  font-family: $primary-font;
+}
+
+.App {
+  position: relative;
+}

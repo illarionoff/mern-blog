@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import PropTypes from "prop-types";
 import { withRouter } from "react-router-dom";
-
+import "./EditPost.scss";
 // Redux
 import { connect } from "react-redux";
 import { editBlogpost } from "../../../actions/blogpostActions";
@@ -39,26 +39,31 @@ class index extends Component {
   render() {
     const { editPost } = this.props.blogpost;
     return (
-      <div>
-        <div>
-          <form onSubmit={this.onSubmit}>
-            <input
-              type="text"
-              placeholder="Title"
-              onChange={this.onChange}
-              name="title"
-              value={this.state.title}
-            />
-            <input
-              type="text"
-              placeholder="Body"
-              onChange={this.onChange}
-              name="body"
-              value={this.state.body}
-            />
+      <div className="form-input">
+        <form onSubmit={this.onSubmit}>
+          <input
+            type="text"
+            placeholder="Title"
+            onChange={this.onChange}
+            name="title"
+            value={this.state.title}
+          />
+
+          <textarea
+            value={this.state.body}
+            onChange={this.onChange}
+            name="body"
+          />
+          <div className="center">
             <input type="submit" className="button" placeholder="Submit" />
-          </form>
-        </div>
+            <button
+              className="button button-green"
+              onClick={() => this.props.history.goBack()}
+            >
+              BACK
+            </button>
+          </div>
+        </form>
       </div>
     );
   }
