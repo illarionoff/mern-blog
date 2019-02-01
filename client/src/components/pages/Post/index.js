@@ -6,12 +6,12 @@ import Aside from "../Main/Aside";
 // Redux
 import { connect } from "react-redux";
 
-import { editBlogpost } from "../../../actions/blogpostActions";
+import { setEditBlogpost } from "../../../actions/blogpostActions";
 
 class index extends Component {
   onEditClick = e => {
     e.preventDefault();
-    this.props.editBlogpost(this.props.blogpost.currentPost);
+    this.props.setEditBlogpost(this.props.blogpost.currentPost);
     this.props.history.push("/edit");
   };
 
@@ -47,7 +47,7 @@ class index extends Component {
 
 index.propTypes = {
   blogpost: PropTypes.object.isRequired,
-  editBlogpost: PropTypes.func.isRequired
+  setEditBlogpost: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({
@@ -56,5 +56,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { editBlogpost }
+  { setEditBlogpost }
 )(index);

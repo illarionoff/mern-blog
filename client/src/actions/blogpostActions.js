@@ -8,13 +8,23 @@ export const setPost = post => {
     payload: post
   };
 };
+
 // Set Edit blogpost
-export const editBlogpost = post => {
+export const setEditBlogpost = post => {
   return {
     type: SET_EDIT_POST,
     payload: post
   };
 };
+// Set Edit blogpost
+export const editBlogpost = editedBlogpost => dispatch => {
+  console.log(editedBlogpost);
+  axios
+    .put(`api/blogposts/${editedBlogpost._id}`, editedBlogpost)
+    .then(res => console.log(res))
+    .catch(err => console.log(err));
+};
+
 // Add new blogpost
 export const addNewPost = (newBlogpost, history) => dispatch => {
   console.log(newBlogpost);
