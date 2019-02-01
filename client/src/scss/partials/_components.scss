@@ -83,3 +83,32 @@
   color: gray;
   margin: 0 1rem;
 }
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  margin: 0 auto;
+  height: 4rem;
+  width: 30%;
+  display: block;
+  margin: 1rem;
+  border-radius: 500px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  text-align: center;
+  outline: none;
+  font-family: $tretiary-font;
+
+  font-size: 2rem;
+  &:active {
+    outline: none;
+  }
+}
+
+textarea {
+  margin: 25px auto;
+  width: 30%;
+  height: 30vh;
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}

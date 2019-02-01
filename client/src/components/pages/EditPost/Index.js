@@ -39,9 +39,10 @@ class index extends Component {
   render() {
     const { editPost } = this.props.blogpost;
     return (
-      <div className="form-input">
-        <form onSubmit={this.onSubmit}>
+      <section className="editform">
+        <form onSubmit={this.onSubmit} className="editform-input">
           <input
+            className="center"
             type="text"
             placeholder="Title"
             onChange={this.onChange}
@@ -50,6 +51,7 @@ class index extends Component {
           />
 
           <textarea
+            className="center"
             value={this.state.body}
             onChange={this.onChange}
             name="body"
@@ -64,7 +66,7 @@ class index extends Component {
             </button>
           </div>
         </form>
-      </div>
+      </section>
     );
   }
 }

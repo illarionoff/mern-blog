@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 // Redux
 import { connect } from "react-redux";
 import { loginUser } from "../../../actions/authActions";
+import "./Login.scss";
 
 class index extends Component {
   state = {
@@ -42,13 +43,9 @@ class index extends Component {
 
   render() {
     return (
-      <section className="section-form">
-        <form
-          noValidate
-          className="section-form-input"
-          onSubmit={this.onSubmit}
-        >
-          <h2 className="section-form-title">Login</h2>
+      <section className="loginform">
+        <form noValidate className="loginform-input" onSubmit={this.onSubmit}>
+          <h2 className="loginform-title title title-primary">Login</h2>
           <input
             name="email"
             value={this.state.email}
@@ -66,7 +63,7 @@ class index extends Component {
             labels="Your password"
           />
 
-          <div className="section-form-button">
+          <div className="loginform-button">
             <button type="submit" className="button button-green">
               Submit
             </button>
